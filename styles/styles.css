@@ -1,0 +1,60 @@
+:root {
+    --card-1-border: hsl(180, 62%, 55%);
+    --card-2-border: hsl(0, 78%, 62%);
+    --card-3-border: hsl(34, 97%, 64%);
+    --card-4-border: hsl(212, 86%, 64%);
+    --fonts1: hsl(234, 12%, 34%);
+    --fonts2: hsl(229, 6%, 66%);
+    --fonts3: hsl(0, 0%, 98%);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+.main-container {
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 220px 3fr;
+    width: 100%;
+    min-height: 100vh;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 5px 0 5px;
+}
+.header #title {
+    font-weight: 200;
+    font-size: 1.5rem;
+    color: var(--fonts2);
+}
+.header #sponsor {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--fonts1);
+}
+.header #description {
+    font-weight: 400;
+    color: var(--fonts2);
+    text-align: center;
+    padding: 0.9375rem 1.8rem 0.625rem 1.8rem;
+}
+
+/* ------------------------------------------------------ */
+
+
