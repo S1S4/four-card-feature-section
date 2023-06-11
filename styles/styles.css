@@ -6,6 +6,7 @@
     --fonts1: hsl(234, 12%, 34%);
     --fonts2: hsl(229, 6%, 66%);
     --fonts3: hsl(0, 0%, 98%);
+    --shadowColor: hsl(229, 6%, 66%);
 }
 * {
     box-sizing: border-box;
@@ -57,4 +58,91 @@ body::-webkit-scrollbar {
 
 /* ------------------------------------------------------ */
 
+.cards-container {
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    max-width: 18.75rem;
+    min-height: 12.8125rem;
+    padding: 20px 17px 0 20px;
+    border-radius: 0.2rem;
+    background-color: white;
+}
+.card h3 {
+    font-weight: 600;
+    color: var(--fonts1);
+}
+.card p {
+    font-weight: 400;
+    color: var(--fonts2);
+}
+.card1 {
+    box-shadow: inset 0px 4px 0px 0px var(--card-1-border), 0px 5px 11px -6px var(--shadowColor);
+    background: url(../images/icon-supervisor.svg) no-repeat;
+    background-position: 93% 85%;
+    background-size: 20%;
+}
+.card2 {
+    box-shadow: inset 0px 4px 0px 0px var(--card-2-border), 0px 5px 11px -6px var(--shadowColor);
+    background: url(../images/icon-team-builder.svg) no-repeat;
+    background-position: 93% 85%;
+    background-size: 20%;
+}
+.card3 {
+    box-shadow: inset 0px 4px 0px 0px var(--card-3-border), 0px 5px 11px -6px var(--shadowColor);
+    background: url(../images/icon-karma.svg) no-repeat;
+    background-position: 93% 85%;
+    background-size: 20%;
+}
+.card4 {
+    box-shadow: inset 0px 4px 0px 0px var(--card-4-border), 0px 5px 11px -6px var(--shadowColor);
+    background: url(../images/icon-calculator.svg) no-repeat;
+    background-position: 93% 85%;
+    background-size: 20%;
+}
 
+@media (min-width: 500px) and (max-width: 959px) {
+    .header #description {
+        width: 70%;
+    }
+}
+
+@media (min-width: 960px) {
+    .header {
+        justify-content: flex-end;
+    }
+    .header #description {
+        width: 66%;
+    }
+    .cards-container {
+        grid-template-columns: 18.75rem 18.75rem 18.75rem;
+        grid-template-areas:
+        "card1 card2 card4"
+        "card1 card3 card4"
+        ;
+        place-content: center;
+        justify-content: center;
+    }
+    .card1 {
+        grid-area: card1;
+        align-self: center;
+    }
+    .card2 {
+        grid-area: card2;
+        align-self: center;
+    }
+    .card3 {
+        grid-area: card3;
+        align-self: center;
+    }
+    .card4 {
+        grid-area: card4;
+        align-self: center;
+    }
+}
